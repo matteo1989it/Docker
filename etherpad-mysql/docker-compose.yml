@@ -1,0 +1,47 @@
+# configure a etherpad server that uses a mysql db (hosted in a separate
+# container) as a backend
+# 
+# This config uses 'named' external volumes for storing the persistent data.
+# These are managed with the 'docker volume' command.
+
+etherpad:
+    # build its image from the etherpad directory
+    build:  etherpad
+    environment:
+        ETHERPAD_ADMIN_PASSWORD: 'EtherpadAdministrationPassword'
+        ETHERPAD_ADMIN_NAME: 'EtherpadAdministrationUser'
+        ETHERPAD_DB_PASSWORD: 'DatabaseUserPassword'
+        ETHERPAD_DB_HOST: 'mysql'
+        ETHERPAD_DB_TYPE: 'mysql'
+        ETHERPAD_DB_USER: 'etherpad'
+        ETHERPAD_DB_NAME: 'etherpad'
+        ETHERPAD_DB_CHARSET: 'utf8mb4'
+    # TCP redirection: redirect port 9001 of the local host to the 9001 port of the container
+    ports:
+        - "9001:9001"
+    # link container by name
+    links:
+        - mysql:mysql
+    # store var directory in dev-etherpad-var volume
+    volumes:
+        - dev-etherpad-var:/opt/etherpad/var
+
+mysql:
+    # use the official mariadb image from the docker store
+    # https://store.docker.com/images/mariadb
+    image: mariadb:10
+    # TODO: environement variables
+    environment:
+        MYSQL_DATABASE: 'db'
+        MYSQL_USER: 'etherpad'
+        MYSQL_PASSWORD: 'etherpad'
+        MYSQL_ROOT_PASSWORD: 'etherpad'
+    restart: always
+    ports:
+        - "3306:3306"
+
+    volumes:
+        # store mysql data into the 'dev-etherpad-db'
+        - dev-etherpad-mysql:/var/lib/mysql
+
+# vim:sts=4:sw=4:

@@ -1,0 +1,17 @@
+docker ps -a ->
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                            PORTS               NAMES
+3b382a58b23d        debian              "bash"              2 minutes ago       Exited (127) About a minute ago                       beautiful_ganguly
+845fc6d4450e        debian              "bash"              4 minutes ago       Exited (0) 3 minutes ago                              dazzling_haslett
+22e26d66b041        debian              "cat /etc/motd"     13 minutes ago      Exited (0) 13 minutes ago                             happy_banach
+927ef3940050        debian              "cat /etc/motd"     14 minutes ago      Exited (0) 14 minutes ago                             happy_varahamihira
+d13c4e37defa        debian              "ls /bin"           15 minutes ago      Exited (0) 15 minutes ago                             clever_lehmann
+74719b774639        debian              "ls /bin"           15 minutes ago      Exited (0) 15 minutes ago                             crazy_moser
+945d435d634a        debian:latest       "bash"              17 minutes ago      Exited (0) 17 minutes ago                             tender_liskov
+92169485b1f7        81d8baad44a7        "/bin/bash"         25 minutes ago      Exited (0) 20 minutes ago                             silly_banach
+
+=====================================
+
+docker start -i 3b ->
+
+root@3b382a58b23d:/#

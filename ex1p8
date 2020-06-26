@@ -1,0 +1,17 @@
+# Before executing the command I previously restarted the container and created a file with the following commands:
+# docker run -i 3b
+# cd /tmp && touch test_diff
+# exit
+
+docker diff 3b ->
+
+C /tmp
+A /tmp/test_diff
+C /root
+A /root/.bash_history
+
+====================
+
+docker commit 3b ->
+
+sha256:c49d347ce482639edbec4c8fc700d490f5e94c82a01183005df1d1e6fa0f300d

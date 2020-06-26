@@ -1,0 +1,29 @@
+docker run -i debian ->
+
+ls
+bin
+boot
+dev
+etc
+home
+lib
+lib64
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+sys
+tmp
+usr
+var
+id
+uid=0(root) gid=0(root) groups=0(root)
+
+
+hostname
+845fc6d4450e
+

@@ -1,0 +1,38 @@
+# Before executing docker rm
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                      PORTS               NAMES
+3b382a58b23d        debian              "bash"              18 minutes ago      Exited (0) 9 minutes ago                        beautiful_ganguly
+845fc6d4450e        debian              "bash"              21 minutes ago      Exited (0) 20 minutes ago                       dazzling_haslett
+22e26d66b041        debian              "cat /etc/motd"     30 minutes ago      Exited (0) 30 minutes ago                       happy_banach
+927ef3940050        debian              "cat /etc/motd"     30 minutes ago      Exited (0) 30 minutes ago                       happy_varahamihira
+d13c4e37defa        debian              "ls /bin"           31 minutes ago      Exited (0) 31 minutes ago                       clever_lehmann
+74719b774639        debian              "ls /bin"           32 minutes ago      Exited (0) 32 minutes ago                       crazy_moser
+945d435d634a        debian:latest       "bash"              34 minutes ago      Exited (0) 34 minutes ago                       tender_liskov
+92169485b1f7        81d8baad44a7        "/bin/bash"         42 minutes ago      Exited (0) 37 minutes ago                       silly_banach
+
+# After executing docker rm 3b
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                      PORTS               NAMES
+845fc6d4450e        debian              "bash"              25 minutes ago      Exited (0) 23 minutes ago                       dazzling_haslett
+22e26d66b041        debian              "cat /etc/motd"     34 minutes ago      Exited (0) 34 minutes ago                       happy_banach
+927ef3940050        debian              "cat /etc/motd"     34 minutes ago      Exited (0) 34 minutes ago                       happy_varahamihira
+d13c4e37defa        debian              "ls /bin"           35 minutes ago      Exited (0) 35 minutes ago                       clever_lehmann
+74719b774639        debian              "ls /bin"           36 minutes ago      Exited (0) 36 minutes ago                       crazy_moser
+945d435d634a        debian:latest       "bash"              38 minutes ago      Exited (0) 38 minutes ago                       tender_liskov
+92169485b1f7        81d8baad44a7        "/bin/bash"         45 minutes ago      Exited (0) 41 minutes ago                       silly_banach
+
+# After executing docker prune
+
+
+WARNING! This will remove all stopped containers.
+Are you sure you want to continue? [y/N] Deleted Containers:
+845fc6d4450ee8bac4b3e33ed4a36e1067bd4ee54ba63d1f82d1b1b7e32a5da5
+22e26d66b041167d7f449e0326340c30158c34e21f81cc1e6d9d41b37534e03c
+927ef39400505999cf75fd4f1629387907c7496c91624302331c981c246401ae
+d13c4e37defa076df710df2afc20c448e447ebc00e2c8090c2b0042b2374144b
+74719b774639a8c612e0b6342cffec00d41151b811b95a50fd2ada734b55a0ae
+945d435d634ae34c573bb2ab75abf21e9379eb57a78c13c22c73dc08849e5e9e
+92169485b1f769c2d127100c324f7932afcf8e2daa1c578abd466985af87068f
+
+Total reclaimed space: 71.24MB
+

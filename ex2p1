@@ -1,0 +1,7 @@
+docker run --rm -t -i -v /tmp/myvol:/myvol debian ->
+
+root@3eccbb3fc75e:/# ls
+bin  boot  dev	etc  home  lib	lib64  media  mnt  myvol  opt  proc  root  run	sbin  srv  sys	tmp  usr  var
+root@3eccbb3fc75e:/# cd myvol
+root@3eccbb3fc75e:/myvol# ls
+

@@ -1,0 +1,17 @@
+docker run --rm -t -i -v Devops_trainig:/myvol debian ->
+
+root@78710379d692:/# ls
+bin  boot  dev	etc  home  lib	lib64  media  mnt  myvol  opt  proc  root  run	sbin  srv  sys	tmp  usr  var
+
+====================
+
+docker volume ls -> 
+
+DRIVER              VOLUME NAME
+local               Devops_trainig
+
+====================
+
+docker volume rm Devops_trainig
+
+Devops_trainig

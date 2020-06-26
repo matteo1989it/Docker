@@ -1,0 +1,48 @@
+Client:
+ Debug Mode: false
+
+Server:
+ Containers: 5
+  Running: 1
+  Paused: 0
+  Stopped: 4
+ Images: 4
+ Server Version: 19.03.8
+ Storage Driver: overlay2
+  Backing Filesystem: <unknown>
+  Supports d_type: true
+  Native Overlay Diff: true
+ Logging Driver: json-file
+ Cgroup Driver: cgroupfs
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local logentries splunk syslog
+ Swarm: inactive
+ Runtimes: runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: 7ad184331fa3e55e52b890ea95e65ba581ae3429
+ runc version: dc9208a3303feef5b3839f4323d9beb36df0a9dd
+ init version: fec3683
+ Security Options:
+  apparmor
+  seccomp
+   Profile: default
+ Kernel Version: 4.19.0-9-amd64
+ Operating System: Debian GNU/Linux 10 (buster)
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 1
+ Total Memory: 1.777GiB
+ Name: debian
+ ID: 7LID:TEHZ:VS4L:SCF3:DERA:QWBW:FJVJ:XIEX:HK45:PTJ3:A5WQ:72AC
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ Registry: https://index.docker.io/v1/
+ Labels:
+ Experimental: false
+ Insecure Registries:
+  127.0.0.0/8
+ Live Restore Enabled: false
+
